@@ -1,0 +1,27 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-stream {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vjs-big-play-button {
+    position: relative !important;
+}

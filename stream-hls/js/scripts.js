@@ -1,3 +1,4 @@
+
 var stream;
 
 $(document).ready(function(){
@@ -21,7 +22,7 @@ $(document).ready(function(){
     }();
     var streamkey = parameters['id'] ? parameters['id'] : 'emerzil';
 
-    stream = videojs('video-stream', {techOrder: ['flash'], flash: {swf: "video-js.swf"}});
-    stream.src({type: "rtmp/mp4", src: "rtmp://emerzil.chickenkiller.com/live/" + streamkey });
+    stream = videojs('video-stream');
+    stream.src({type: "application/x-mpegURL", src: "http://emerzil.chickenkiller.com:8080/hls/" + streamkey + ".m3u8" });
 });
 
