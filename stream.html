@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Emerzil's Livestream's</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+		<div id="container">
+			<div class="title">Emerzil's Livestreams</div>
+
+            <div id="template" class="user">
+                <div class="userName">!username</div>
+                <div class="userContainer">
+                    <div class="userAvatarContaienr">
+                        <img class="userAvatar" src="img/!avatar" />
+                    </div>
+                    <div class="userLinks">
+                        <div class="linkrow">
+                            <div class ="label">RTMP</div>
+                            <div class ="link"><a href="http://!streamhost/stream/stream.html?id=!streamkey">Watch</a></div>
+                        </div>
+                        <div class="linkrow">
+                            <div class ="label">HLS</div>
+                            <div class ="link"><a href="http://!streamhost/stream-hls/stream.html?id=!streamkey">Watch</a></div>
+                        </div>
+                        <div class="linkrow">
+                            <div class ="label">VLC</div>
+                            <div class ="link">rtmp://!streamhost!rtmpport/live/!streamkey<br />http://!streamhost!hlsport/hls/!streamkey.m3u8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about">
+                <div class="aboutTitle">About</div>
+			    <div class="aboutSubTitle">RTMP Streams</div>
+			    <div class="aboutText">Has a lower delay of about 1-5 seconds, but requires flash player.</div>
+			    <div class="aboutSubTitle">HLS Streams</div>
+			    <div class="aboutText">Has a higher delay of about 20-40 seconds, but doesn't require flash. Allows for around 5 minutes rewind and seeking of current stream.</div>
+                <div class="aboutSubTitle">VLC URLs</div>
+			    <div class="aboutText">Copy RTMP or HLS url into network stream for VLC or other media player that allows network stream. Will have associated delays as mentioned above.</div>
+            </div>
+		</div>
+    
+
+</body></html>

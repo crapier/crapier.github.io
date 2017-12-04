@@ -1,0 +1,94 @@
+body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+	color: #CCCCCC;
+	background-color: #121212;
+    padding: 0px;
+    margin: 0px;
+}
+#container {
+    width: auto;
+    max-width: 700px;
+    margin: 50px auto 50px auto;
+	background-color: #303030;
+	padding: 15px 50px 50px 50px;
+	border-radius: 5px;
+}
+#template {
+    display: none;
+}
+
+
+a {
+	color: #0090FF;
+}
+a:visited {
+	color: #9090FF;
+}
+
+
+.title {
+	text-align: center;
+	padding-bottom: 12px;
+	color: #FFFFFF;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+.user {
+    border-top: 3px solid #121212;
+    margin-bottom: 50px;
+}
+.userContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.userName {
+	padding-top: 12px;
+    padding-bottom: 5px;
+	color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+}
+.userAvatarContaienr {
+    width: 150px;
+    height: 150px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+.userAvatar {
+    width: 150px;
+    height: 150px;
+    padding: 0px;
+    border-radius: 75px;
+}
+.userLinks {
+    width: auto;
+    height: auto;
+}
+.linkrow {
+    display: flex;
+}
+.label {
+    width: 50px;
+    padding-right: 20px;
+}
+.link {
+    word-break: break-all;
+}
+
+.about {
+    font-size: 10px;
+}
+.aboutTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.aboutSubTitle {
+    font-size: 14px;
+}
+.aboutText {
+    padding-left: 20px;
+}
