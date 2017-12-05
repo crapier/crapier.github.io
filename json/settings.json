@@ -1,0 +1,18 @@
+{
+    "settings": {
+        "streamhost": "emerzil.chickenkiller.com",
+        "rtmpport": "",
+        "hlsport": ":8080",
+        "users": [{
+            "username": "Emerzil",
+            "avatar": "emerzil.jpg",
+            "streamkey": "emerzil",
+            "addr": "76.110.92.117"
+        }, {
+            "username": "Sygge",
+            "avatar": "sygge.jpg",
+            "streamkey": "sygge",
+            "addr": "73.32.88.77"
+        }]
+    }
+}

@@ -25,3 +25,7 @@ body {
 .vjs-big-play-button {
     position: relative !important;
 }
+
+.red {
+    color: red;
+}

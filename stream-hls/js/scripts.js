@@ -31,12 +31,14 @@ $(document).ready(function(){
         if(!stream.seeking()) {
             stream.currentTime(stream.seekable().start(0) + 15);
         }
+        $('#live-indicator').removeClass('red');
     }
     
     function fullForward() {
         if(!stream.seeking()) {
             stream.currentTime(stream.seekable().end(0));
         }
+        $('#live-indicator').addClass('red');
     }
     
     function stepRewind() {
@@ -47,6 +49,7 @@ $(document).ready(function(){
             }
             stream.currentTime(seekTime);
         }
+        $('#live-indicator').removeClass('red');
     }
     
     function stepForward() {
@@ -54,28 +57,35 @@ $(document).ready(function(){
             var seekTime = stream.currentTime() + 15;
             if (seekTime > stream.seekable().end(0)) {
                 seekTime = stream.seekable().end(0);
+                $('#live-indicator').addClass('red');
             }
             stream.currentTime(seekTime);
         }
+        
     }
     
-    $(".vjs-live-display").click(fullForward);
+    $(".vjs-live-display").click(fullForward)
+        .html("Live <span id='live-indicator' class='red'>&#9210;<span>")
+        .prop('title', 'Go Live');
     
     $('<div/>', {
-        style: 'padding-left: 15px',
-        text: '<<<<Rewind',
+        style: 'padding-left: 15px; font-size: 20px',
+        html: '&#9198;',
+        title: 'Rewind 10m',
         click: fullRewind
     }).appendTo('.vjs-live-control.vjs-control');
     
     $('<div/>', {
-        style: 'padding-left: 15px',
-        text: '<<Step Back',
+        style: 'padding-left: 15px; font-size: 20px',
+        html: '&#8630;',
+        title: 'Step Back 15s',
         click: stepRewind
     }).appendTo('.vjs-live-control.vjs-control');
     
     $('<div/>', {
-        style: 'padding-left: 15px',
-        text: 'Step Forward>>',
+        style: 'padding-left: 15px; font-size: 20px',
+        html: '&#8631;',
+        title: 'Step Forward 15s',
         click: stepForward
     }).appendTo('.vjs-live-control.vjs-control');
 });

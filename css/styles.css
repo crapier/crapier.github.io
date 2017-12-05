@@ -1,17 +1,17 @@
 body {
     font-family: Tahoma, Verdana, Arial, sans-serif;
-	color: #CCCCCC;
-	background-color: #121212;
-    padding: 0px;
+    color: #CCCCCC;
+    background-color: #121212;
+    padding: 0px 20px 0px 20px;
     margin: 0px;
 }
 #container {
     width: auto;
     max-width: 700px;
-    margin: 50px auto 50px auto;
-	background-color: #303030;
-	padding: 15px 50px 50px 50px;
-	border-radius: 5px;
+    margin: 30px auto 30px auto;
+    background-color: #303030;
+    padding: 15px 50px 50px 50px;
+    border-radius: 5px;
 }
 #template {
     display: none;
@@ -27,9 +27,9 @@ a:visited {
 
 
 .title {
-	text-align: center;
-	padding-bottom: 12px;
-	color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 12px;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 30px;
 }
@@ -45,9 +45,9 @@ a:visited {
     flex-wrap: wrap;
 }
 .userName {
-	padding-top: 12px;
+    padding-top: 12px;
     padding-bottom: 5px;
-	color: #FFFFFF;
+    color: #FFFFFF;
     font-weight: bold;
     font-size: 20px;
     width: 100%;
@@ -91,4 +91,18 @@ a:visited {
 }
 .aboutText {
     padding-left: 20px;
+}
+
+#video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+#video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
