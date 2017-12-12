@@ -1,0 +1,11 @@
+{
+    "settings": {
+        "users": [{
+            "streamkey": "emerzil",
+            "secret": "SERVERONLY"
+        }, {
+            "streamkey": "sygge",
+            "secret": "SERVERONLY"
+        }]
+    }
+}

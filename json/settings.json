@@ -6,13 +6,11 @@
         "users": [{
             "username": "Emerzil",
             "avatar": "emerzil.jpg",
-            "streamkey": "emerzil",
-            "addr": "76.110.92.117"
+            "streamkey": "emerzil"
         }, {
             "username": "Sygge",
             "avatar": "sygge.jpg",
-            "streamkey": "sygge",
-            "addr": "73.32.88.77"
+            "streamkey": "sygge"
         }]
     }
 }

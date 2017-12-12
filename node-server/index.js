@@ -22,8 +22,13 @@ function logger(type, message) {
 };
 
 var port = 8888;
-var settings = JSON.parse(fs.readFileSync('/home/ubuntu/web/json/settings.json', 'utf8')).settings;
-logger("s", "Using User Settings: \n\n" + util.inspect(settings, false, null) + "\n\n");
+var settingsFile = '/home/ubuntu/node-server/json/settings.json';
+var settings = JSON.parse(fs.readFileSync(settingsFile, 'utf8')).settings;
+var settingUpdater = fs.watch(settingsFile, {persistent: false, recursive: false, encoding: 'utf8'}, function(eventType, filename){
+    if (eventType == 'change') {
+        settings = JSON.parse(fs.readFileSync(settingsFile, 'utf8')).settings;
+    }
+});
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -36,7 +41,7 @@ app.post('/on_publish', (req, res) => {
     var check = false;
 
     settings.users.forEach(function(element){
-        if (req.body.addr == element.addr && req.body.name == element.streamkey) {
+        if (req.body.secret == element.secret && req.body.name == element.streamkey) {
             check = true;
             logger("p", "Publishing allowed for: " + element.username);
             res.status(200).send('OK');
